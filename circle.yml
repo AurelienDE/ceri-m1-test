@@ -1,0 +1,7 @@
+machine:
+  java:
+    version: openjdk7
+general:
+  branches:
+    only:
+      - master # list of branches to build
