@@ -1,4 +1,4 @@
-package fr.univavignon.pokedex.api;
+package main.java.fr.univavignon.pokedex.api;
 
 import java.util.Comparator;
 import java.util.List;
@@ -22,7 +22,6 @@ public interface IPokedex extends IPokemonMetadataProvider, IPokemonFactory {
 	 * Adds the given <tt>pokemon</tt> to this pokedex and returns
 	 * it unique index.
 	 * 
-	 * First commit HAHAHA
 	 * @param pokemon Pokemon to add to this pokedex.
 	 * @return Index of this pokemon relative to this pokedex.
 	 */
