@@ -11,7 +11,4 @@ test :
   override:
     - mvn clean  
     - mvn jacoco:prepare-agent test jacoco:report
-    - mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% codacy:coverage
- 
-
- 
+    - mvn com.gavinmogan:codacy-maven-plugin:coverage -DcoverageReportFile=target/site/jacoco/jacoco.xml -DprojectToken=$Project_Token -DapiToken=$API_Token
