@@ -8,5 +8,8 @@ general:
 
       
 test :
-	mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% clean test jacoco:report codacy:coverage
+  override:
+    - mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% clean test jacoco:report codacy:coverage
+ 
+
  
