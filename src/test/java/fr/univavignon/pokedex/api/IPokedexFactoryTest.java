@@ -20,10 +20,18 @@ public class IPokedexFactoryTest {
 
 	// A rendre pour le 5 mai a felix.voituret@ismart.fr*
 	// token coverage : f923e3e736b04d10b121ac9a9e4124ba
-	PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
-	
-	Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
 
+	@Mock
+	private IPokedexFactory pokedexFactory;
+	@Mock
+	private IPokemonMetadataProvider pokemonMetadataProvider;
+	@Mock
+	private IPokemonFactory pokemonFactory;
+	@Mock
+	private IPokedex pokedex;
+	
 	@Before
 	public void setUp() throws PokedexException {
 		MockitoAnnotations.initMocks(this);
@@ -31,15 +39,6 @@ public class IPokedexFactoryTest {
 		Mockito.when(pokemonFactory.createPokemon(0, 613, 64,4000, 4)).thenReturn(pokemon);
 		Mockito.when(pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory)).thenReturn(pokedex);
 	}
-	
-	@Mock
-	IPokedexFactory pokedexFactory;
-	@Mock
-	IPokemonMetadataProvider pokemonMetadataProvider;
-	@Mock
-	IPokemonFactory pokemonFactory;
-	@Mock
-	IPokedex pokedex;
 	
 	@Test
 	public void test() throws PokedexException {

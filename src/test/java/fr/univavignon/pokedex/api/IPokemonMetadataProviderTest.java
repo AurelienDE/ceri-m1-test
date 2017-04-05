@@ -18,16 +18,16 @@ import fr.univavignon.pokedex.api.PokemonMetadata;
 public class IPokemonMetadataProviderTest {
 
 	
-	PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+	
+	@Mock
+	private IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Before
 	public void setUp() throws PokedexException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
 	}
-	
-	@Mock
-	IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Test
 	public void test() throws PokedexException {

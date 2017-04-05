@@ -14,16 +14,16 @@ import fr.univavignon.pokedex.api.Pokemon;
 
 public class IPokemonFactoryTest {
 
-	Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	
+	@Mock
+	private IPokemonFactory pokemonFactory;
 	
 	@Before
 	public void setUp() throws PokedexException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonFactory.createPokemon(0, 613, 64,4000, 4)).thenReturn(pokemon);
 	}
-	
-	@Mock
-	IPokemonFactory pokemonFactory;
 	
 	@Test
 	public void test() throws PokedexException {
@@ -32,5 +32,4 @@ public class IPokemonFactoryTest {
 		assertEquals(126,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getAttack());
 		
 	}
-
 }

@@ -18,8 +18,11 @@ import fr.univavignon.pokedex.api.Pokemon;
 
 public class IPokedexTest {
 
-	Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
-	List<Pokemon> listepokemon = new ArrayList<Pokemon>();
+	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	private List<Pokemon> listepokemon = new ArrayList<Pokemon>();
+	
+	@Mock
+	private IPokedex pokedex;
 	
 	@Before
 	public void setUp() throws PokedexException {
@@ -31,9 +34,6 @@ public class IPokedexTest {
 		Mockito.when(pokedex.getPokemons()).thenReturn(listepokemon);
 	}
 	
-	@Mock
-	IPokedex pokedex;
-
 	@Test
 	public void test() throws PokedexException {
 		assertEquals(0,pokedex.size());
