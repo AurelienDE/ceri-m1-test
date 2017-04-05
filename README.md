@@ -35,3 +35,22 @@ IPokedex :
 -> a chaque modification sauvegarder sur le disk les trainers
 
 Utiliser un max de librairy
+
+Best Order :
+- IPokemonDataProvider
+- IPokemonFactory
+- IPokedex
+- IPokedexFactory
+- IPokemonTrainerFactory
+
+Web :
+- curl
+- selenium + phantomJS
+- Jsoup
+- URLConnection (rude!)
+
+Serialisation :
+- gson (json)
+- simpleXML
+- XStream
+- java.xml.*(SAX
