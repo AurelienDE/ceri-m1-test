@@ -2,6 +2,9 @@ package test.java.fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,13 +27,13 @@ public class IPokemonMetadataProviderTest {
 	private IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Before
-	public void setUp() throws PokedexException {
+	public void setUp() throws PokedexException, MalformedURLException, IOException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
 	}
 	
 	@Test
-	public void test() throws PokedexException {
+	public void test() throws PokedexException, MalformedURLException, IOException {
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(0,pokemonMetadataProvider.getPokemonMetadata(0).getIndex());
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getAttack());

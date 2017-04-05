@@ -2,6 +2,9 @@ package test.java.fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -43,7 +46,7 @@ public class IPokemonTrainerFactoryTest {
 	private PokemonTrainer ondine;
 	
 	@Before
-	public void setUp() throws PokedexException {
+	public void setUp() throws PokedexException, MalformedURLException, IOException {
 		
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
@@ -54,7 +57,7 @@ public class IPokemonTrainerFactoryTest {
 	}
 	
 	@Test
-	public void test() throws PokedexException {
+	public void test() throws PokedexException, MalformedURLException, IOException {
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));

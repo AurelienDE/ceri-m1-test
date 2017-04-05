@@ -1,5 +1,8 @@
 package fr.univavignon.pokedex.api;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 /**
  * An IPokemonMetadataProvider aims to provide PokemonMetadata
  * for a given pokemon index.
@@ -15,7 +18,9 @@ public interface IPokemonMetadataProvider {
 	 * @param index Index of the pokemon to retrieve metadata for.
 	 * @return Metadata of the pokemon.
 	 * @throws PokedexException If the given <tt>index</tt> is not valid.
+	 * @throws IOException 
+	 * @throws MalformedURLException 
 	 */
-	PokemonMetadata getPokemonMetadata(int index) throws PokedexException;
+	PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException;
 	
 }
