@@ -25,10 +25,23 @@ public class IPokemonTrainerFactoryTest {
 	//PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory);
 	//PokemonTrainer ondine=new PokemonTrainer("ondine", team, pokedex);
 	
-	Team team=Team.INSTINCT;
-	PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
-	Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	private Team team=Team.INSTINCT;
+	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
 
+	@Mock
+	private IPokemonTrainerFactory pokemonTrainerFactory;
+	@Mock
+	private IPokedexFactory pokedexFactory;
+	@Mock
+	private IPokemonMetadataProvider pokemonMetadataProvider;
+	@Mock
+	private IPokemonFactory pokemonFactory;
+	@Mock
+	private IPokedex pokedex;
+	@Mock
+	private PokemonTrainer ondine;
+	
 	@Before
 	public void setUp() throws PokedexException {
 		
@@ -40,25 +53,11 @@ public class IPokemonTrainerFactoryTest {
 		Mockito.when(pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory)).thenReturn(ondine);
 	}
 	
-	@Mock
-	IPokemonTrainerFactory pokemonTrainerFactory;
-	@Mock
-	IPokedexFactory pokedexFactory;
-	@Mock
-	IPokemonMetadataProvider pokemonMetadataProvider;
-	@Mock
-	IPokemonFactory pokemonFactory;
-	@Mock
-	IPokedex pokedex;
-	@Mock
-	PokemonTrainer ondine;
-	
 	@Test
 	public void test() throws PokedexException {
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
-		
 		assertEquals(ondine,pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory));
 		
 	}
