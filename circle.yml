@@ -5,3 +5,8 @@ general:
   branches:
     only:
       - master # list of branches to build
+
+      
+test :
+	mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% clean test jacoco:report codacy:coverage
+ 
