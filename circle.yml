@@ -9,8 +9,9 @@ general:
       
 test :
   override:
-    - mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% clean test 
-    - mvn jacoco:report codacy:coverage
+    - mvn clean  
+    - mvn jacoco:prepare-agent test jacoco:report
+    - mvn -DprojectToken=%Project_Token% -DapiToken=%API_Token% codacy:coverage
  
 
  
