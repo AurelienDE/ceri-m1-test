@@ -4,8 +4,11 @@ public class PokemonTrainerFactory implements IPokemonTrainerFactory{
 
 	@Override
 	public PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory) {
-		// TODO Auto-generated method stub
-		return null;
+		PokemonMetadataProvider metadataProvider = new PokemonMetadataProvider() ;
+		PokemonFactory pokemonFactory =  new PokemonFactory();
+		IPokedex pokedex= pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
+		PokemonTrainer pokeTrainer = new PokemonTrainer(name,team,pokedex);
+		return pokeTrainer;
 	}
 
 }
