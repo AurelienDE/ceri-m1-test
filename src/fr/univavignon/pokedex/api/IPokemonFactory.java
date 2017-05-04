@@ -1,5 +1,8 @@
 package fr.univavignon.pokedex.api;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 /**
  * Factory interface for class that aims to create Pokemon instance.
  * 
@@ -16,7 +19,10 @@ public interface IPokemonFactory {
 	 * @param dust Required dust for upgrading pokemon.
 	 * @param candy Required candy for upgrading pokemon.
 	 * @return Created pokemon instance.
+	 * @throws IOException 
+	 * @throws PokedexException 
+	 * @throws MalformedURLException 
 	 */
-	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy);
+	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException;
 	
 }
