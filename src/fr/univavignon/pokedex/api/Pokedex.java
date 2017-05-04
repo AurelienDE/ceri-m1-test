@@ -8,20 +8,27 @@ import java.util.List;
 
 public class Pokedex implements IPokedex {
 
-	List<Pokemon> listePokemon = new ArrayList<Pokemon>();
+	private List<Pokemon> listePokemon;
+	private IPokemonMetadataProvider providerMetaData;
+	private IPokemonFactory pokeFactory;
+	
+	public Pokedex(IPokemonMetadataProvider metadataProvider,IPokemonFactory pokemonFactory){
+		this.providerMetaData = metadataProvider;
+		this.pokeFactory = pokemonFactory;
+		listePokemon= new ArrayList<Pokemon>();
+	}
+	
 	
 	@Override
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException {
-			PokemonMetadataProvider providerMetaData = new PokemonMetadataProvider();
-			PokemonMetadata pokemonMetadata = providerMetaData.getPokemonMetadata(index);
+			PokemonMetadata pokemonMetadata = this.providerMetaData.getPokemonMetadata(index);
 		return pokemonMetadata;
 	}
 
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy)
 			throws MalformedURLException, PokedexException, IOException {
-		PokemonFactory pokeFactory = new PokemonFactory();
-		Pokemon poke = pokeFactory.createPokemon(index, cp, hp, dust, candy);
+		Pokemon poke = this.pokeFactory.createPokemon(index, cp, hp, dust, candy);
 		return poke;
 	}
 
