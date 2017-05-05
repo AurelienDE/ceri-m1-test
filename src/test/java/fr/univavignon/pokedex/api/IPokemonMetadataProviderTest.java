@@ -39,7 +39,6 @@ public class IPokemonMetadataProviderTest {
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getAttack());
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getDefense());
 		assertEquals(90,pokemonMetadataProvider.getPokemonMetadata(0).getStamina());
-		
 	}
 
 }

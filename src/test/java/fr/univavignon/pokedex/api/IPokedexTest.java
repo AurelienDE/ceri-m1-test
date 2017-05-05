@@ -12,7 +12,6 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import fr.univavignon.pokedex.api.IPokedex;
-import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
 

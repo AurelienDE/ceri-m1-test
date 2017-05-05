@@ -12,10 +12,6 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import fr.univavignon.pokedex.api.IPokedex;
 import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
@@ -45,7 +41,7 @@ public class Pokedex implements IPokedex {
 			InputStreamReader ipsr=new InputStreamReader(ips);
 			BufferedReader br=new BufferedReader(ipsr);
 			String ligne;
-			/* Ecrit dans l'ArrayList les pokemons du pokedex sauvegardés */
+			/* Ecrit dans l'ArrayList les pokemons du pokedex sauvegardes */
 		}		
 		catch (Exception e){
 			System.out.println(e.toString());

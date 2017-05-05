@@ -24,10 +24,6 @@ import fr.univavignon.pokedex.api.Team;
 
 public class IPokemonTrainerFactoryTest {
 	
-	
-	//PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory);
-	//PokemonTrainer ondine=new PokemonTrainer("ondine", team, pokedex);
-	
 	private Team team=Team.INSTINCT;
 	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
 	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);

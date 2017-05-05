@@ -19,20 +19,13 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 		
 	}
 	
-	/*//JSON de test
-	String maTasse = "";
-	JSONObject tasse = new JSONObject(maTasse);*/
-	//System.out.println(tasse.getString(couleur)); //Rouge
-	
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException{
 		
-		/* lire url */
 		PokemonMetadata pokemonMetaData=null;
 		String listeLigne="";
 		InputStream in = new URL( "https://raw.githubusercontent.com/PokemonGo-Enhanced/node-pokemongo-data/master/data.json" ).openStream();
 		 try {
 			 listeLigne=listeLigne+IOUtils.toString( in );
-		   //System.out.println( IOUtils.toString( in ) );
 		 } finally {
 		   IOUtils.closeQuietly(in);
 		 }
