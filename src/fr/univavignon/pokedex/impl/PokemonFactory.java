@@ -12,6 +12,7 @@ import fr.univavignon.pokedex.impl.CalculIVIsEasyGame;
 public class PokemonFactory implements IPokemonFactory {
 	
 	public PokemonFactory(){
+		/*test*/
 	}
 	
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException, InterruptedException{
