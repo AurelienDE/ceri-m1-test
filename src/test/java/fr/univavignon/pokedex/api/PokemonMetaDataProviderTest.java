@@ -18,7 +18,5 @@ public class PokemonMetaDataProviderTest {
 	@Test
 	public void test() throws PokedexException, MalformedURLException, IOException {
 		PokemonMetadata listeLigne = testList.getPokemonMetadata(150);
-		System.out.println(listeLigne.getName());
-		
 	}
 }

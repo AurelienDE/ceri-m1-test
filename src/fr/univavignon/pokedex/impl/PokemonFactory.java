@@ -18,8 +18,9 @@ public class PokemonFactory implements IPokemonFactory {
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException, InterruptedException{
 		
 		PokemonMetadata medatadatPokemo = new PokemonMetadataProvider().getPokemonMetadata(index);
-		CalculIVIsEasyGame calculator = new CalculIVIsEasyGame();
-		double iv=calculator.findIV(medatadatPokemo.getName(), cp, hp, dust);
+		double iv=0;
+		//CalculIVIsEasyGame calculator = new CalculIVIsEasyGame();
+		//double iv=calculator.findIV(medatadatPokemo.getName(), cp, hp, dust);
 		Pokemon poke = new Pokemon(index,medatadatPokemo.getName(),medatadatPokemo.getAttack(),
 						medatadatPokemo.getDefense(),medatadatPokemo.getStamina(),
 						cp, hp, dust, candy, iv);

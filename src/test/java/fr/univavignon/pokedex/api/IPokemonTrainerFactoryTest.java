@@ -21,6 +21,7 @@ import fr.univavignon.pokedex.api.Pokemon;
 import fr.univavignon.pokedex.api.PokemonMetadata;
 import fr.univavignon.pokedex.api.PokemonTrainer;
 import fr.univavignon.pokedex.api.Team;
+import fr.univavignon.pokedex.impl.PokemonTrainerFactory;
 
 public class IPokemonTrainerFactoryTest {
 	
@@ -58,6 +59,9 @@ public class IPokemonTrainerFactoryTest {
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
 		assertEquals(ondine,pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory));
+		/* Test Implementation */
+		PokemonTrainerFactory poketrainerfactoryImp = new PokemonTrainerFactory();
+		assertEquals("Ondine",poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getName());
 		
 	}
 }

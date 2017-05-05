@@ -91,7 +91,7 @@ public class Pokedex implements IPokedex {
 	@Override
 	public Pokemon getPokemon(int id) throws PokedexException {
 		for (int i=0;i<size();i++){
-			if (id==this.listePokemon.get(i).getIndex()){
+			if (id==i){
 				return this.listePokemon.get(i);
 			}
 		}

@@ -18,6 +18,8 @@ import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
 import fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.impl.Pokedex;
+import fr.univavignon.pokedex.impl.PokedexFactory;
 
 public class IPokedexFactoryTest {
 
@@ -46,6 +48,13 @@ public class IPokedexFactoryTest {
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
+		
+		/* Test implementation */
+		PokedexFactory pokedexFactoryImp = new PokedexFactory();
+		IPokedex pokedexImp = pokedexFactoryImp.createPokedex(pokemonMetadataProvider,pokemonFactory);
+		pokedexImp.addPokemon(pokemon);
+		assertEquals("Bulbizarre",pokedexImp.getPokemon(0).getName());
+
 		
 	}
 

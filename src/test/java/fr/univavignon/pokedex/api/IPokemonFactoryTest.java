@@ -14,6 +14,7 @@ import org.mockito.MockitoAnnotations;
 import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.impl.PokemonFactory;
 
 public class IPokemonFactoryTest {
 
@@ -33,6 +34,8 @@ public class IPokemonFactoryTest {
 		assertEquals("Bulbizarre",pokemonFactory.createPokemon(0, 613, 64,4000, 4).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(126,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getAttack());
-		
+		/* Test implementation */
+		PokemonFactory pokefactoryImp = new PokemonFactory();
+		assertEquals(126,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getAttack());
 	}
 }

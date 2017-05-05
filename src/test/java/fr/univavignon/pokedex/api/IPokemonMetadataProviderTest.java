@@ -16,6 +16,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.impl.PokemonMetadataProvider;
 
 @RunWith(MockitoJUnitRunner.class)
 public class IPokemonMetadataProviderTest {
@@ -39,6 +40,12 @@ public class IPokemonMetadataProviderTest {
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getAttack());
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getDefense());
 		assertEquals(90,pokemonMetadataProvider.getPokemonMetadata(0).getStamina());
+		
+		/* Test Implementation */
+		PokemonMetadataProvider pokedataproviderImp = new PokemonMetadataProvider();
+		assertEquals(1,pokedataproviderImp.getPokemonMetadata(0).getIndex());
+		assertEquals(126,pokedataproviderImp.getPokemonMetadata(0).getAttack());
+		assertEquals(126,pokedataproviderImp.getPokemonMetadata(0).getDefense());
 	}
 
 }
