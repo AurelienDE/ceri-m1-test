@@ -17,7 +17,7 @@ Avancement :
 
 - Implementation :
   - Retour en JSON de la liste des pokemon pour generer les MedaData : Done
-  - Calculateur : bug version de firefox/selenium
+  - Calculateur : bug version de firefox/selenium Mis en communtaire car cause des soucis dans le build sur CircleCI
   - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps (Mais base implemente)
   - Test implementation : Test de base uniquement, par manque de temps
 
