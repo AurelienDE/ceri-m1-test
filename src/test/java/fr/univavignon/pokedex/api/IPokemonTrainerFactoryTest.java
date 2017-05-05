@@ -49,7 +49,6 @@ public class IPokemonTrainerFactoryTest {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
 		Mockito.when(pokemonFactory.createPokemon(0, 613, 64,4000, 4)).thenReturn(pokemon);
 		Mockito.when(pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory)).thenReturn(pokedex);
-		
 		Mockito.when(pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory)).thenReturn(ondine);
 	}
 	
@@ -59,6 +58,7 @@ public class IPokemonTrainerFactoryTest {
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
 		assertEquals(ondine,pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory));
+		
 		/* Test Implementation */
 		PokemonTrainerFactory poketrainerfactoryImp = new PokemonTrainerFactory();
 		assertEquals("Ondine",poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getName());
