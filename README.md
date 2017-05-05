@@ -16,8 +16,9 @@ Avancement :
 - Test via Mocks
 
 - Implementation :
+  - Retour en JSON de la liste des pokemon pour generer les MedaData : Done
   - Calculateur : bug version de firefox/selenium
-  - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps
+  - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps (Mais base implemente)
   - Test implementation : Test de base uniquement, par manque de temps
 
 
