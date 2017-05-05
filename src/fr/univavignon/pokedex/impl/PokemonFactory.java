@@ -7,7 +7,7 @@ import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
 import fr.univavignon.pokedex.api.PokemonMetadata;
-import fr.univavignon.pokedex.impl.CalculIVIsEasyGame;
+/* import fr.univavignon.pokedex.impl.CalculIVIsEasyGame; */
 
 public class PokemonFactory implements IPokemonFactory {
 	

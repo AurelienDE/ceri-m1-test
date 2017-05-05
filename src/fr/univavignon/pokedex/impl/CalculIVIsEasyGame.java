@@ -1,4 +1,7 @@
-package fr.univavignon.pokedex.impl;
+/* CLASSE GENERE BUG DU BUILD MAVEN ----
+ * 
+ * package fr.univavignon.pokedex.impl;
+
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -54,4 +57,4 @@ public class CalculIVIsEasyGame {
 	
 	}
 	
-}
+}*/

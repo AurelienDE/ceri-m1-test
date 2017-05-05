@@ -75,7 +75,7 @@ public class Pokedex implements IPokedex {
 		int index = indexPre+1;
 		String chaine="";
 		String fichier ="SavePokedex.txt";
-		/* Ecrit dans le fichier de sauvegarde les pokemons ajoutés au pokedex */
+		/* Ecrit dans le fichier de sauvegarde les pokemons ajoutes au pokedex */
 		try {
 			FileWriter fw = new FileWriter (fichier);
 			BufferedWriter bw = new BufferedWriter (fw);
