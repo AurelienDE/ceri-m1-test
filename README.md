@@ -1,10 +1,5 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
-Sujet de TP : 
-
-- [TP0 - Fork them all !](https://github.com/Faylixe/ceri-m1-test/raw/resources/TP0 - fork them all.pdf)
-- [TP1 - (Des)intégration continue](https://github.com/Faylixe/ceri-m1-test/raw/resources/TP1 - (Des)intégration continue.pdf)
-- [TP2 - Pokeunit](https://github.com/Faylixe/ceri-m1-test/raw/resources/TP2 - Pokeunit.pdf)
 
 - Nom : DESVILLETTES Aurelien.
 - Groupe : Alternant.
@@ -16,41 +11,9 @@ Sujet de TP :
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/d661323e496140c68f8a7a279ba2efc6)](https://www.codacy.com/app/AurelienDE/ceri-m1-test?utm_source=github.com&utm_medium=referral&utm_content=AurelienDE/ceri-m1-test&utm_campaign=Badge_Coverage)
 
 
-IPokemonTrainerFactory :
-pour chaque trainer serialise sur le disk (json, …)
-regarder si le fichier existe si
-non le cree
-oui le deserialiser
+Source utiles : 
 
-IpokemonmetadataProvider:
-Pour une espece donne, donner les caracteristiques de l’espece
-donne moi des pokemonmetadata pour un index donne, get from web
-
-IpokemonFactory :
--> chercher un calculateur pour calculer les stats des pokemon
--> return un Pokemon avec les bonnes stats
-
-IPokedex :
--> collection de pokemon
--> a chaque modification sauvegarder sur le disk les trainers
-
-Utiliser un max de librairy
-
-Best Order :
-- IPokemonDataProvider
-- IPokemonFactory
-- IPokedex
-- IPokedexFactory
-- IPokemonTrainerFactory
-
-Web :
-- curl
-- selenium + phantomJS
-- Jsoup
-- URLConnection (rude!)
-
-Serialisation :
-- gson (json)
-- simpleXML
-- XStream
-- java.xml.*(SAX
+Calculator IV  :https://pokeassistant.com/main/ivcalculator?locale=fr
+Calcul IV formules : http://www.millenium.org/pokemon/pokemon-go/actualites/pokemon-go-stats-theorycraft-statistiques-formules-cp-iv-niveau-valeur-de-recharge-attaque-defense-endurance-pv-147269" 
+WebService Rodriguez Ricardo : https://poke-metadata.herokuapp.com/ivcal.php?method=getIVs&name=Bulbizarre&cp=613&hp=64&dust=4000&powerup=yes
+	
