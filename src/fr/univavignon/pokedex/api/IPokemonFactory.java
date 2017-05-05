@@ -22,7 +22,8 @@ public interface IPokemonFactory {
 	 * @throws IOException 
 	 * @throws PokedexException 
 	 * @throws MalformedURLException 
+	 * @throws InterruptedException 
 	 */
-	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException;
+	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException, InterruptedException;
 	
 }

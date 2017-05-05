@@ -46,7 +46,7 @@ public class IPokemonTrainerFactoryTest {
 	private PokemonTrainer ondine;
 	
 	@Before
-	public void setUp() throws PokedexException, MalformedURLException, IOException {
+	public void setUp() throws PokedexException, MalformedURLException, IOException, InterruptedException {
 		
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
@@ -57,7 +57,7 @@ public class IPokemonTrainerFactoryTest {
 	}
 	
 	@Test
-	public void test() throws PokedexException, MalformedURLException, IOException {
+	public void test() throws PokedexException, MalformedURLException, IOException, InterruptedException {
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));

@@ -1,10 +1,27 @@
-package fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.impl;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 
 public class Pokedex implements IPokedex {
 
@@ -18,6 +35,23 @@ public class Pokedex implements IPokedex {
 		listePokemon= new ArrayList<Pokemon>();
 	}
 	
+	public void initListOnDisk(){
+		String chaine="";
+		String fichier ="src/SavePokedex.json";
+		PokemonMetadata pokemonMetaData=null;
+		//lecture du fichier json	
+		try{
+			InputStream ips=new FileInputStream(fichier); 
+			InputStreamReader ipsr=new InputStreamReader(ips);
+			BufferedReader br=new BufferedReader(ipsr);
+			String ligne;
+			/* Ecrit dans l'ArrayList les pokemons du pokedex sauvegardés */
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
 	
 	@Override
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException {
@@ -27,7 +61,7 @@ public class Pokedex implements IPokedex {
 
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy)
-			throws MalformedURLException, PokedexException, IOException {
+			throws MalformedURLException, PokedexException, IOException, InterruptedException {
 		Pokemon poke = this.pokeFactory.createPokemon(index, cp, hp, dust, candy);
 		return poke;
 	}
@@ -43,6 +77,18 @@ public class Pokedex implements IPokedex {
 		int indexPre = size();
 		this.listePokemon.add(pokemon);
 		int index = indexPre+1;
+		String chaine="";
+		String fichier ="SavePokedex.txt";
+		/* Ecrit dans le fichier de sauvegarde les pokemons ajoutés au pokedex */
+		try {
+			FileWriter fw = new FileWriter (fichier);
+			BufferedWriter bw = new BufferedWriter (fw);
+			PrintWriter fichierSortie = new PrintWriter (bw);
+			fichierSortie.close();
+		}
+		catch (Exception e){
+			System.out.println(e.toString());
+		}	
 		return index;
 	}
 

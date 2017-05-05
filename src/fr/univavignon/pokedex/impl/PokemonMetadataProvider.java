@@ -1,4 +1,4 @@
-package fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,6 +7,10 @@ import java.net.URL;
 
 import org.apache.commons.io.IOUtils;
 import org.json.*;
+
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 
 
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {

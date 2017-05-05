@@ -23,13 +23,13 @@ public class IPokemonFactoryTest {
 	private IPokemonFactory pokemonFactory;
 	
 	@Before
-	public void setUp() throws PokedexException, MalformedURLException, IOException {
+	public void setUp() throws PokedexException, MalformedURLException, IOException, InterruptedException {
 		MockitoAnnotations.initMocks(this);
 		Mockito.when(pokemonFactory.createPokemon(0, 613, 64,4000, 4)).thenReturn(pokemon);
 	}
 	
 	@Test
-	public void test() throws PokedexException, MalformedURLException, IOException {
+	public void test() throws PokedexException, MalformedURLException, IOException, InterruptedException {
 		assertEquals("Bulbizarre",pokemonFactory.createPokemon(0, 613, 64,4000, 4).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(126,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getAttack());

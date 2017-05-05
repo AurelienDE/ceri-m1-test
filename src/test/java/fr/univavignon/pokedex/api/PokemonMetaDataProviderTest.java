@@ -18,7 +18,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.PokemonMetadata;
-import fr.univavignon.pokedex.api.PokemonMetadataProvider;
+import fr.univavignon.pokedex.impl.PokemonMetadataProvider;
 
 
 
