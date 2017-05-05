@@ -13,7 +13,7 @@
 
 Source utiles : 
 
-Calculator IV  :https://pokeassistant.com/main/ivcalculator?locale=fr
-Calcul IV formules : http://www.millenium.org/pokemon/pokemon-go/actualites/pokemon-go-stats-theorycraft-statistiques-formules-cp-iv-niveau-valeur-de-recharge-attaque-defense-endurance-pv-147269" 
-WebService Rodriguez Ricardo : https://poke-metadata.herokuapp.com/ivcal.php?method=getIVs&name=Bulbizarre&cp=613&hp=64&dust=4000&powerup=yes
+- Calculator IV  :https://pokeassistant.com/main/ivcalculator?locale=fr
+- Calcul IV formules : http://www.millenium.org/pokemon/pokemon-go/actualites/pokemon-go-stats-theorycraft-statistiques-formules-cp-iv-niveau-valeur-de-recharge-attaque-defense-endurance-pv-147269" 
+- WebService Rodriguez Ricardo : https://poke-metadata.herokuapp.com/ivcal.php?method=getIVs&name=Bulbizarre&cp=613&hp=64&dust=4000&powerup=yes
 	
