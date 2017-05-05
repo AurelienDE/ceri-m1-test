@@ -10,6 +10,16 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/d661323e496140c68f8a7a279ba2efc6)](https://www.codacy.com/app/AurelienDE/ceri-m1-test?utm_source=github.com&utm_medium=referral&utm_content=AurelienDE/ceri-m1-test&utm_campaign=Badge_Coverage)
 
+Avancement :
+- Integration de Maven, CircleCI, jakoko+Codacy
+- Ajout de code Coverage via codacy
+- Test via Mocks
+
+- Implementation :
+  - Calculateur : bug version de firefox/selenium
+  - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps
+  - Test implementation : Test de base uniquement, par manque de temps
+
 
 Source utiles : 
 
