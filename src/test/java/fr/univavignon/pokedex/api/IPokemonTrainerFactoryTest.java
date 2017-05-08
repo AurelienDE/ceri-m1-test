@@ -30,17 +30,17 @@ public class IPokemonTrainerFactoryTest {
 	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
 
 	@Mock
-	private IPokemonTrainerFactory pokemonTrainerFactory;
+	protected IPokemonTrainerFactory pokemonTrainerFactory;
 	@Mock
-	private IPokedexFactory pokedexFactory;
+	protected IPokedexFactory pokedexFactory;
 	@Mock
-	private IPokemonMetadataProvider pokemonMetadataProvider;
+	protected IPokemonMetadataProvider pokemonMetadataProvider;
 	@Mock
-	private IPokemonFactory pokemonFactory;
+	protected IPokemonFactory pokemonFactory;
 	@Mock
-	private IPokedex pokedex;
+	protected IPokedex pokedex;
 	@Mock
-	private PokemonTrainer ondine;
+	protected PokemonTrainer ondine;
 	
 	@Before
 	public void setUp() throws PokedexException, MalformedURLException, IOException, InterruptedException {
@@ -54,14 +54,13 @@ public class IPokemonTrainerFactoryTest {
 	
 	@Test
 	public void test() throws PokedexException, MalformedURLException, IOException, InterruptedException {
+		
 		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
 		assertEquals(ondine,pokemonTrainerFactory.createTrainer("Ondine",team,pokedexFactory));
-		
-		/* Test Implementation */
-		PokemonTrainerFactory poketrainerfactoryImp = new PokemonTrainerFactory();
-		assertEquals("Ondine",poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getName());
+		//assertEquals(pokedex,poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getPokedex());
+
 		
 	}
 }

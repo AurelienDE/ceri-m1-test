@@ -22,7 +22,7 @@ import fr.univavignon.pokedex.impl.PokemonMetadataProvider;
 public class IPokemonMetadataProviderTest {
 
 	
-	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbasaur",126,126,90);
 	
 	@Mock
 	private IPokemonMetadataProvider pokemonMetadataProvider;
@@ -35,17 +35,11 @@ public class IPokemonMetadataProviderTest {
 	
 	@Test
 	public void test() throws PokedexException, MalformedURLException, IOException {
-		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
+		assertEquals("Bulbasaur",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(0,pokemonMetadataProvider.getPokemonMetadata(0).getIndex());
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getAttack());
 		assertEquals(126,pokemonMetadataProvider.getPokemonMetadata(0).getDefense());
 		assertEquals(90,pokemonMetadataProvider.getPokemonMetadata(0).getStamina());
-		
-		/* Test Implementation */
-		PokemonMetadataProvider pokedataproviderImp = new PokemonMetadataProvider();
-		assertEquals(1,pokedataproviderImp.getPokemonMetadata(0).getIndex());
-		assertEquals(126,pokedataproviderImp.getPokemonMetadata(0).getAttack());
-		assertEquals(126,pokedataproviderImp.getPokemonMetadata(0).getDefense());
 	}
 
 }

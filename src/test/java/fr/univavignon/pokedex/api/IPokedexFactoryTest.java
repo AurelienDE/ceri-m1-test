@@ -23,17 +23,17 @@ import fr.univavignon.pokedex.impl.PokedexFactory;
 
 public class IPokedexFactoryTest {
 
-	private PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
-	private Pokemon pokemon = new Pokemon(0,"Bulbizarre", 126,126,90,613,64, 4000, 4, 56);
+	protected PokemonMetadata pokemonMetadata = new PokemonMetadata(0,"Bulbasaur",126,126,90);
+	protected Pokemon pokemon = new Pokemon(0,"Bulbasaur", 126,126,90,613,64, 4000, 4, 56);
 
 	@Mock
-	private IPokedexFactory pokedexFactory;
+	protected IPokedexFactory pokedexFactory;
 	@Mock
-	private IPokemonMetadataProvider pokemonMetadataProvider;
+	protected IPokemonMetadataProvider pokemonMetadataProvider;
 	@Mock
-	private IPokemonFactory pokemonFactory;
+	protected IPokemonFactory pokemonFactory;
 	@Mock
-	private IPokedex pokedex;
+	protected IPokedex pokedex;
 	
 	@Before
 	public void setUp() throws PokedexException, MalformedURLException, IOException, InterruptedException {
@@ -45,17 +45,9 @@ public class IPokedexFactoryTest {
 	
 	@Test
 	public void test() throws PokedexException, MalformedURLException, IOException, InterruptedException {
-		assertEquals("Bulbizarre",pokemonMetadataProvider.getPokemonMetadata(0).getName());
+		assertEquals("Bulbasaur",pokemonMetadataProvider.getPokemonMetadata(0).getName());
 		assertEquals(4000,pokemonFactory.createPokemon(0, 613, 64,4000, 4).getDust());
 		assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
-		
-		/* Test implementation */
-		PokedexFactory pokedexFactoryImp = new PokedexFactory();
-		IPokedex pokedexImp = pokedexFactoryImp.createPokedex(pokemonMetadataProvider,pokemonFactory);
-		pokedexImp.addPokemon(pokemon);
-		assertEquals("Bulbizarre",pokedexImp.getPokemon(0).getName());
-
-		
 	}
 
 }
