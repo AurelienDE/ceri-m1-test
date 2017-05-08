@@ -15,8 +15,14 @@ public class PokemonFactory implements IPokemonFactory {
 		
 		PokemonMetadata medatadatPokemo = new PokemonMetadataProvider().getPokemonMetadata(index);
 		double iv=0;
-		//CalculIVIsEasyGame calculator = new CalculIVIsEasyGame();
-		//double iv=calculator.findIV(medatadatPokemo.getName(), cp, hp, dust);
+		Calculator calculator = new Calculator();
+		try {
+			calculator.setUp();
+			iv=calculator.findIV(medatadatPokemo.getName(), cp, hp, dust);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Impossible d'atteindre l'url");
+		}
 		Pokemon poke = new Pokemon(index,medatadatPokemo.getName(),medatadatPokemo.getAttack(),
 						medatadatPokemo.getDefense(),medatadatPokemo.getStamina(),
 						cp, hp, dust, candy, iv);

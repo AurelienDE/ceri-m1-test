@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import org.junit.Test;
 import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
 import fr.univavignon.pokedex.impl.PokemonFactory;
 
 public class IPokemonFactoryImplTest extends IPokemonFactoryTest{
@@ -14,15 +15,17 @@ public class IPokemonFactoryImplTest extends IPokemonFactoryTest{
 	@Test
 	public void test() throws PokedexException, MalformedURLException, IOException, InterruptedException {
 		PokemonFactory pokefactoryImp = new PokemonFactory();
-		assertEquals(126,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getAttack());
-		assertEquals(126,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getDefense());
-		assertEquals(613,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getCp());
-		assertEquals(4,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getCandy());
-		assertEquals(4000,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getDust());
-		assertEquals(64,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getHp());
-		assertEquals(0,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getIndex());
-		assertEquals("Bulbasaur",pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getName());
-		assertEquals(90,pokefactoryImp.createPokemon(0, 613, 64,4000, 4).getStamina());
+		Pokemon pokeObtained = pokefactoryImp.createPokemon(0, 613, 64,4000, 4);
+		assertEquals(126,pokeObtained.getAttack());
+		assertEquals(126,pokeObtained.getDefense());
+		assertEquals(613,pokeObtained.getCp());
+		assertEquals(4,pokeObtained.getCandy());
+		assertEquals(4000,pokeObtained.getDust());
+		assertEquals(64,pokeObtained.getHp());
+		assertEquals(0,pokeObtained.getIndex());
+		assertEquals("Bulbasaur",pokeObtained.getName());
+		assertEquals(90,pokeObtained.getStamina());
+		assertEquals(84.4,pokeObtained.getIv(),0.01);
 	}
 	
 }

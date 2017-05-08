@@ -1,40 +1,25 @@
-/* CLASSE GENERE BUG DU BUILD MAVEN ----
- * 
- * package fr.univavignon.pokedex.impl;
+ package fr.univavignon.pokedex.impl;
 
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+public class Calculator {
 
-public class CalculIVIsEasyGame {
+	WebDriver driver;
+	String url;
 
-
-	static final String URL = "https://pokeassistant.com/main/ivcalculator?locale=fr";
-	private WebDriver driver; 
-	private String baseUrl; 
-	private boolean acceptNextAlert = true; 
-	private StringBuffer verificationErrors = new StringBuffer(); 
-	  
-	public CalculIVIsEasyGame(){
-		
-	}
-	
 	public void setUp() throws Exception { 
-	    // On instancie notre driver, et on configure notre temps d'attente 
-	    this.driver = new FirefoxDriver(); 
-	    this.baseUrl = "https://pokeassistant.com/main/ivcalculator?locale=fr"; 
-	    this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
+		System.setProperty("webdriver.chrome.driver", "D:\\Travail\\MavenTest\\DriverOpera\\operadriver_win64\\operadriver.exe");
+		this.driver = new ChromeDriver();
+		this.url="https://pokeassistant.com/main/ivcalculator?locale=en";
 	  }
 	
 	public double findIV(String name,int cp,int hp,int dust) throws MalformedURLException, IOException, InterruptedException{
-
-		this.driver.get(URL);
+		this.driver.get(this.url);
         Thread.sleep(500);
         this.driver.findElement(By.xpath("//*[@id=\"search_pokemon_name\"]")).sendKeys(name);
         Thread.sleep(500);
@@ -57,4 +42,9 @@ public class CalculIVIsEasyGame {
 	
 	}
 	
-}*/
+	
+
+
+
+	
+}

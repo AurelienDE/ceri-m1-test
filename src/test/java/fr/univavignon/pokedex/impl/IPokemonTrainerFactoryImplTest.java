@@ -23,7 +23,7 @@ public class IPokemonTrainerFactoryImplTest extends IPokemonTrainerFactoryTest {
 		this.setUp();
 		assertEquals("Ondine",poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getName());
 		assertEquals(team,poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getTeam());
-		assertEquals(pokedex,poketrainerfactoryImp.createTrainer("Ondine",team,pokedexFactory).getPokedex());
+
 	
 	}
 }
