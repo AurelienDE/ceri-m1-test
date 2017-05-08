@@ -1,0 +1,32 @@
+{"trainers": {[
+	{
+		"Ondine": [{
+
+			    	"Bulbasaur" : {
+				        "index": "0",
+						"attack": "126",
+						"defense": "126",
+						"stamina": "90",
+						"cp": "613",
+						"hp": "64",
+						"dust": "4000",
+						"candy": "4",
+						"iv": "84.4"
+					},
+			    	"herbizarre" : {
+				        "index": "1",
+						"attack": "126",
+						"defense": "126",
+						"stamina": "90",
+						"cp": "613",
+						"hp": "64",
+						"dust": "4000",
+						"candy": "4",
+						"iv": "84.4"
+					}
+				}]
+		
+		}
+	]}
+}
+	

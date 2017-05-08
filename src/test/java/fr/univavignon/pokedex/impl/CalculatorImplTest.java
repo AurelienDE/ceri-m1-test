@@ -2,7 +2,6 @@ package test.java.fr.univavignon.pokedex.impl;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
 import fr.univavignon.pokedex.impl.Calculator;
 
 

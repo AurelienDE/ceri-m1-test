@@ -1,11 +1,19 @@
 package fr.univavignon.pokedex.impl;
 
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import fr.univavignon.pokedex.api.IPokedex;
 import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
@@ -25,19 +33,55 @@ public class Pokedex implements IPokedex {
 		listePokemon= new ArrayList<Pokemon>();
 	}
 	
-	/*
-	public void initListOnDisk(){
-		String chaine="";
-		String fichier ="src/SavePokedex.json";
-		PokemonMetadata pokemonMetaData=null;
+	
+	//public void initListOnDisk(String nameTrainer){
+		
+		/*		 JSONArray array = new JSONArray(listeLigne);
+			for (int i=0;i<array.length();i++){
+				if (index==i){
+					JSONObject jsonObject= array.getJSONObject(i);
+					pokemonMetaData = new PokemonMetadata(
+						jsonObject.getInt("PkMn"),
+						jsonObject.getString("Identifier"),
+						jsonObject.getInt("BaseAttack"),
+						jsonObject.getInt("BaseDefense"),
+						jsonObject.getInt("BaseStamina")		
+					);
+				}
+			}*/
+		
+		//String chaine="";
+		//String fichier ="src/SavePokedex.json";
+		//PokemonMetadata pokemonMetaData=null;
 		//lecture du fichier json	
-		try{
-			InputStream ips=new FileInputStream(fichier); 
+		//try{
+			/*InputStream ips=new FileInputStream(fichier); 
 			InputStreamReader ipsr=new InputStreamReader(ips);
 			BufferedReader br=new BufferedReader(ipsr);
 			String ligne;
-			// Ecrit dans l'ArrayList les pokemons du pokedex sauvegardes 
-		}		
+			 while ((ligne=br.readLine())!=null){
+		            System.out.println(ligne);
+		            chaine+=ligne+"\n";
+		     }
+		    br.close();
+		    JSONObject trainers = new JSONObject(chaine);
+		    JSONArray pokemons =  trainers.getJSONArray("pokemon");
+		    System.out.println(trainers);*/
+			/*for (int i=0;i<array.length();i++){
+				if (index==i){
+					JSONObject jsonObject= array.getJSONObject(i);
+					pokemonMetaData = new PokemonMetadata(
+						jsonObject.getInt("PkMn"),
+						jsonObject.getString("Identifier"),
+						jsonObject.getInt("BaseAttack"),
+						jsonObject.getInt("BaseDefense"),
+						jsonObject.getInt("BaseStamina")		
+					);
+					
+					
+					
+				}*/
+		/*}		
 		catch (Exception e){
 			System.out.println(e.toString());
 		}

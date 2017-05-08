@@ -20,6 +20,7 @@ public class PokedexImplTest extends IPokedexTest {
 		PokemonFactory factory = new PokemonFactory();
 		Pokedex pokedex = new Pokedex(meta,factory);
 		//pokedex.initListOnDisk();
+		
 		assertEquals(null,pokedex.getPokemon(0));
 		Pokemon pokemon = new Pokemon(1, "Bulbizarre", 0, 0, 0, 0, 0, 0, 0, 0);
 		Pokemon pokemonDeux = new Pokemon(2, "Herbizarre", 0, 0, 0, 0, 0, 0, 0, 0);
@@ -32,6 +33,8 @@ public class PokedexImplTest extends IPokedexTest {
 		assertEquals(pokemonDeux,pokedex.getPokemon(1));
 		assertEquals(listeTestPoke,pokedex.getPokemons());
 		assertEquals(2,pokedex.size());
+		
+		//pokedex.initListOnDisk("Ondine");
 		
 
 		
