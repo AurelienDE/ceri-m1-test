@@ -11,17 +11,17 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/d661323e496140c68f8a7a279ba2efc6)](https://www.codacy.com/app/AurelienDE/ceri-m1-test?utm_source=github.com&utm_medium=referral&utm_content=AurelienDE/ceri-m1-test&utm_campaign=Badge_Coverage)
 
 Avancement :
-- Integration de Maven, CircleCI, jakoko+Codacy
+- Integration de Maven, CircleCI, jakoko+Codacy, Selenium, JSON librairie
 - Ajout de code Coverage via codacy
-- Test via Mocks
 
 - Implementation :
   - Retour en JSON de la liste des pokemon pour generer les MetaData : Done
   - Calculateur : Utilisation de Opera driver via selenium mis dans les sources, bug la compilation maven : DONE
   - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps (Mais base implemente, fichier JSON et même librairie JSON que pour les MetaData qui aurai été utilisé)
-  
-  -Test API
-  -Test Implementation
+
+Test :
+  - Test API
+  - Test Implementation
 
 
 Source utiles : 
