@@ -13,7 +13,9 @@ public class Calculator {
 	String url;
 
 	public void setUp() throws Exception { 
-		System.setProperty("webdriver.chrome.driver", "D:\\Travail\\MavenTest\\DriverOpera\\operadriver_win64\\operadriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\Travail\\MavenTest\\DriverOpera\\operadriver_win64\\operadriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/operadriver.exe");
+		
 		this.driver = new ChromeDriver();
 		this.url="https://pokeassistant.com/main/ivcalculator?locale=en";
 	  }
