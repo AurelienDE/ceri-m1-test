@@ -11,10 +11,6 @@ import fr.univavignon.pokedex.api.PokemonMetadata;
 
 public class PokemonFactory implements IPokemonFactory {
 	
-	public PokemonFactory(){
-		/*test*/
-	}
-	
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws MalformedURLException, PokedexException, IOException, InterruptedException{
 		
 		PokemonMetadata medatadatPokemo = new PokemonMetadataProvider().getPokemonMetadata(index);

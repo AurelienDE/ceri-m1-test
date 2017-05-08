@@ -14,10 +14,6 @@ import fr.univavignon.pokedex.api.PokemonMetadata;
 
 
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
-
-	public PokemonMetadataProvider(){
-		
-	}
 	
 	@SuppressWarnings("deprecation")
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException{
