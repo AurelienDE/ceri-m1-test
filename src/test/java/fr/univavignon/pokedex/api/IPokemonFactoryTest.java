@@ -4,17 +4,15 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
 import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
-import fr.univavignon.pokedex.impl.PokemonFactory;
+
 
 public class IPokemonFactoryTest {
 

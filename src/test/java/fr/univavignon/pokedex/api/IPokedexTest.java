@@ -4,13 +4,11 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
 import fr.univavignon.pokedex.api.IPokedex;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;

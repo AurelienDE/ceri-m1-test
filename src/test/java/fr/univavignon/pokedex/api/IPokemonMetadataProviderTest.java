@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,11 +11,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
-
 import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.PokemonMetadata;
-import fr.univavignon.pokedex.impl.PokemonMetadataProvider;
+
 
 @RunWith(MockitoJUnitRunner.class)
 public class IPokemonMetadataProviderTest {

@@ -1,13 +1,7 @@
 package fr.univavignon.pokedex.impl;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileWriter;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -31,6 +25,7 @@ public class Pokedex implements IPokedex {
 		listePokemon= new ArrayList<Pokemon>();
 	}
 	
+	/*
 	public void initListOnDisk(){
 		String chaine="";
 		String fichier ="src/SavePokedex.json";
@@ -41,12 +36,12 @@ public class Pokedex implements IPokedex {
 			InputStreamReader ipsr=new InputStreamReader(ips);
 			BufferedReader br=new BufferedReader(ipsr);
 			String ligne;
-			/* Ecrit dans l'ArrayList les pokemons du pokedex sauvegardes */
+			// Ecrit dans l'ArrayList les pokemons du pokedex sauvegardes 
 		}		
 		catch (Exception e){
 			System.out.println(e.toString());
 		}
-	}
+	}*/
 	
 	
 	@Override
@@ -73,9 +68,9 @@ public class Pokedex implements IPokedex {
 		int indexPre = size();
 		this.listePokemon.add(pokemon);
 		int index = indexPre+1;
-		String chaine="";
+		/*String chaine="";
 		String fichier ="SavePokedex.txt";
-		/* Ecrit dans le fichier de sauvegarde les pokemons ajoutes au pokedex */
+		// Ecrit dans le fichier de sauvegarde les pokemons ajoutes au pokedex 
 		try {
 			FileWriter fw = new FileWriter (fichier);
 			BufferedWriter bw = new BufferedWriter (fw);
@@ -84,7 +79,7 @@ public class Pokedex implements IPokedex {
 		}
 		catch (Exception e){
 			System.out.println(e.toString());
-		}	
+		}*/
 		return index;
 	}
 

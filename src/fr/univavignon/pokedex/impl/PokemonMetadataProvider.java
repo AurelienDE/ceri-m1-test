@@ -19,6 +19,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException, MalformedURLException, IOException{
 		
 		PokemonMetadata pokemonMetaData=null;

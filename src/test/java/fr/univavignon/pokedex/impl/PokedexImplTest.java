@@ -4,7 +4,6 @@ package test.java.fr.univavignon.pokedex.impl;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-
 import org.junit.Test;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.Pokemon;
@@ -20,7 +19,7 @@ public class PokedexImplTest extends IPokedexTest {
 		PokemonMetadataProvider meta= new PokemonMetadataProvider();
 		PokemonFactory factory = new PokemonFactory();
 		Pokedex pokedex = new Pokedex(meta,factory);
-		pokedex.initListOnDisk();
+		//pokedex.initListOnDisk();
 		assertEquals(null,pokedex.getPokemon(0));
 		Pokemon pokemon = new Pokemon(1, "Bulbizarre", 0, 0, 0, 0, 0, 0, 0, 0);
 		Pokemon pokemonDeux = new Pokemon(2, "Herbizarre", 0, 0, 0, 0, 0, 0, 0, 0);
