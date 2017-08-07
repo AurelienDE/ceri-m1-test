@@ -17,7 +17,6 @@ Avancement :
 - Implementation :
   - Retour en JSON de la liste des pokemon pour generer les MetaData : Done
   - Calculateur : Utilisation de Opera driver via selenium mis dans les sources, bug la compilation maven : DONE
-  - Sauvegarde sur le disque (JSON) Trainer+Pokedex : Pas implémenté par manque de temps (Mais base implemente, fichier JSON et même librairie JSON que pour les MetaData qui aurai été utilisé)
 
 Test :
   - Test API
